@@ -1,0 +1,13 @@
+@use 'variables' as v;
+
+@mixin link-states {
+  color: v.$text-color;
+
+  &:hover {
+    color: #B9B9B9;
+  }
+
+  &:active {
+    color: darken(v.$text-color, 40%);
+  }
+}

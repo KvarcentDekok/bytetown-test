@@ -1,0 +1,86 @@
+@use 'variables' as v;
+
+.recommended {
+  padding: 48px 0;
+  min-height: 60vh;
+
+  position: relative;
+
+  background-color: v.$light-scheme-color;
+}
+
+.recommended__container {
+  @media (min-width: v.$desktop-width) {
+    max-width: 1158px;
+  }
+}
+
+.recommended__title {
+  $title-color: #A18460;
+
+  margin: 0;
+
+  position: relative;
+
+  font-family: "Grafita", "Arial", sans-serif;
+  font-size: 30px;
+  line-height: 36px;
+  color: $title-color;
+  font-weight: normal;
+
+  &::before {
+    width: 100%;
+    height: 1px;
+
+    position: absolute;
+    top: 50%;
+    left: calc(-100% - 16px);
+
+    transform: translateY(-50%);
+    background-color: $title-color;
+  }
+
+  &::after {
+    width: 87px;
+    height: 30px;
+
+    position: absolute;
+    top: 50%;
+    left: -103px;
+
+    transform: translateY(-50%);
+    background: url("/img/rhombus.svg") no-repeat center;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    font-size: 54px;
+    line-height: 64px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    &::before,
+    &::after {
+      content: "";
+    }
+  }
+}
+
+.recommended__separator {
+  margin: 48px 0;
+}
+
+.recommended__substrate-block {
+  width: 100%;
+  display: flex;
+
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+.recommended__substrate {
+  width: calc(100% / 3);
+  height: 100vh;
+
+  background-color: v.$light-scheme-color;
+}

@@ -1,0 +1,30 @@
+@use 'variables' as v;
+
+.home {
+  padding: 100px 0 91px 0;
+
+  background-color: v.$dark-scheme-color;
+
+  @media (min-resolution: v.$retina-dpi), (min-resolution: v.$retina-dppx) {
+    background: v.$dark-scheme-color url("/img/background-image@2x.jpg") no-repeat center;
+    background-size: cover;
+  }
+
+  @media (min-width: v.$tablet-width) {
+    padding-top: 185px;
+
+    background: v.$dark-scheme-color url("/img/background-image@1x.jpg") no-repeat center;
+    background-size: cover;
+  }
+}
+
+.home__container {
+  @media (min-width: v.$tablet-width) {
+    width: max-content;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    max-width: 1363px;
+  }
+}
+

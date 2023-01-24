@@ -1,0 +1,26 @@
+@use 'variables' as v;
+
+.header {
+  width: 100%;
+  padding: 21px 0 21px;
+
+  position: absolute;
+  z-index: 1;
+}
+
+.header__container {
+  display: flex;
+
+  @media (min-width: v.$desktop-width) {
+    max-width: 1192px;
+  }
+}
+
+.header__navigation {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo {
+  margin-right: 89px;
+}

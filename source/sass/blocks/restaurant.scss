@@ -1,0 +1,126 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.restaurant {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+
+  backdrop-filter: blur(7px);
+
+  &:nth-of-type(1) {
+    background-color: rgba(83, 109, 173, 0.42);
+  }
+
+  &:nth-of-type(2) {
+    background-color: rgba(127, 110, 87, 0.42);
+  }
+
+  &:nth-of-type(3) {
+    background-color: rgba(238, 0, 57, 0.2);
+  }
+
+  &:nth-of-type(4) {
+    background-color: rgba(127, 32, 143, 0.3);
+  }
+
+  &:nth-of-type(5) {
+    background-color: rgba(176, 154, 156, 0.3);
+  }
+}
+
+.restaurant__logo {
+  margin-bottom: 16px;
+
+  &--vogue {
+    margin-top: 5px;
+    margin-left: 6px;
+  }
+
+  &--dyson {
+    margin-top: 16px;
+  }
+
+  &--quartz {
+    margin-top: 34px;
+  }
+
+  &--apple {
+    margin-top: 5px;
+    margin-left: 15px;
+  }
+
+  &--sony {
+    margin-top: 17px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    margin-bottom: 40px;
+  }
+}
+
+.restaurant__wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: auto;
+
+  @media (min-width: v.$desktop-width) {
+    flex-direction: row;
+  }
+}
+
+.restaurant__description {
+  margin: 5px 0 0;
+
+  font-family: "Manrope Medium", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  color: v.$text-color;
+}
+
+.restaurant__soon {
+  margin: 5px 0 0;
+
+  font-family: "Manrope Medium", "Arial", sans-serif;
+  font-size: 20px;
+  line-height: 27px;
+  color: v.$text-color;
+  text-transform: uppercase;
+}
+
+.restaurant__buttons-block {
+  align-self: flex-start;
+  flex-grow: 1;
+  flex-shrink: 0;
+
+  @media (min-width: v.$desktop-width) {
+    align-self: flex-end;
+  }
+}
+
+.restaurant__button {
+  display: block;
+  margin: 5px 0 0;
+
+  font-family: "Manrope Medium", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  text-decoration: none;
+  text-align: left;
+  letter-spacing: -0.388px;
+
+  @media (min-width: v.$desktop-width) {
+    text-align: right;
+  }
+
+  @include m.link-states;
+}
+
+.restaurant__button-icon {
+  margin-right: 8px;
+
+  position: relative;
+  top: 2px;
+
+  fill: transparent;
+}

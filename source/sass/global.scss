@@ -1,0 +1,22 @@
+@use 'variables' as v;
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+
+  background-color: v.$light-scheme-color;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

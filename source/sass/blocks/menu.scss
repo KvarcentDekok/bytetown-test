@@ -1,0 +1,86 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.menu {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  &--left {
+    display: none;
+
+    @media (min-width: v.$tablet-width) {
+      display: flex;
+    }
+  }
+
+  &--right {
+    margin-left: auto;
+  }
+}
+
+.menu__item {
+  margin: 0 16px;
+}
+
+.menu__item-icon {
+  margin: 0 8px;
+}
+
+.menu__link {
+  display: block;
+  padding: 0;
+  border: 0;
+
+  font-family: "Manrope Medium", "Arial", sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+
+  background-color: transparent;
+  cursor: pointer;
+
+  &--cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+
+    position: relative;
+
+    background-color: #74716D;
+    border-radius: 50%;
+
+    &::before {
+      $count-diameter: 15px;
+
+      width: $count-diameter;
+      height: $count-diameter;
+
+      position: absolute;
+      bottom: 5px;
+      left: 7px;
+
+      content: attr(data-count);
+      color: v.$text-color;
+      font-size: 8px;
+      line-height: $count-diameter;
+      text-align: center;
+
+      background-color: #A98F70;
+      border-radius: 50%;
+    }
+  }
+
+  @include m.link-states;
+}
+
+.menu__icon {
+  display: block;
+
+  fill: transparent;
+}
+

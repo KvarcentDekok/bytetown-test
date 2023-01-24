@@ -1,0 +1,48 @@
+@use 'variables' as v;
+
+.restaurants-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  @media (min-width: v.$tablet-width) {
+    display: grid;
+    grid-template:
+            "a a b b c c" 1fr
+            "d d d e e e" 1fr
+          / 130px 130px 130px 130px 130px 130px;
+    column-gap: 13px;
+    row-gap: 18px;
+  }
+
+  @media (min-width: v.$desktop-width) {
+    grid-template:
+            "a a . b . c c c . ." 1fr
+            ". d d d d d . e e e" 1fr
+            / 356px 35px 13px 391px 13px 29px 13px 349px 13px 119px;
+    column-gap: 0;
+  }
+}
+
+.restaurants-list__item {
+  &:nth-of-type(1) {
+    grid-area: a;
+  }
+
+  &:nth-of-type(2) {
+    grid-area: b;
+  }
+
+  &:nth-of-type(3) {
+    grid-area: c;
+  }
+
+  &:nth-of-type(4) {
+    grid-area: d;
+  }
+
+  &:nth-of-type(5) {
+    grid-area: e;
+  }
+}

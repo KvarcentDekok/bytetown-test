@@ -1,0 +1,39 @@
+{
+  "name": "bytetown-test",
+  "version": "1.0.0",
+  "description": "",
+  "devDependencies": {
+    "autoprefixer": "^9.6.5",
+    "browser-sync": "2.27.x",
+    "del": "^5.1.0",
+    "gulp": "4.0.x",
+    "gulp-csso": "^4.0.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-plumber": "1.2.x",
+    "gulp-postcss": "8.0.x",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "2.6.x",
+    "sass": "^1.57.1",
+    "webpack": "5.21.2",
+    "webpack-cli": "3.3.12",
+    "webpack-stream": "^7.0.0"
+  },
+  "scripts": {
+    "build": "gulp build",
+    "start": "gulp start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KvarcentDekok/bytetown-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KvarcentDekok/bytetown-test/issues"
+  },
+  "homepage": "https://github.com/KvarcentDekok/bytetown-test#readme",
+  "dependencies": {
+    "gsap": "^3.11.4"
+  }
+}

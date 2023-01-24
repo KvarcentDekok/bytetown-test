@@ -1,0 +1,27 @@
+@use 'variables' as v;
+
+.button {
+  $button-color: #B79163;
+
+  width: 100%;
+  padding: 12px;
+  border: 1px solid $button-color;
+
+  font-family: "Manrope Medium", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: v.$text-color;
+
+  background-color: $button-color;
+  cursor: pointer;
+
+  &:hover {
+    color: $button-color;
+
+    background-color: transparent;
+  }
+
+  &:active {
+    color: darken($button-color, 20%);
+  }
+}

@@ -1,0 +1,19 @@
+.separator {
+  font-size: 0;
+}
+
+.separator__icon {
+  margin-left: 36px;
+
+  color: #3BA9A9;
+
+  fill: transparent;
+
+  &:first-of-type {
+    margin-left: 0;
+  }
+
+  &:last-of-type {
+    margin-left: 32px;
+  }
+}

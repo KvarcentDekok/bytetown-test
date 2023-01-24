@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="/css/style.min.css">
+
+    <title>Bytetown test</title>
+</head>
+<body>
+<header class="header">
+    <div class="container header__container">
+        <a href="#" class="logo header__logo">
+            <span class="visually-hidden">На главную</span>
+
+            <svg x="0" y="0" width="54" height="52" viewBox="0 0 56 54">
+                <use xlink:href="/img/sprite.svg#logo"></use>
+            </svg>
+        </a>
+
+        <nav class="header__navigation">
+            <ul class="menu menu--left">
+                <li class="menu__item">
+                    <div class="dropdown">
+                        <button type="button" class="menu__link dropdown__control"
+                                data-call="dropdown" aria-controls="restaurants-dropdown" aria-haspopup="listbox">
+                            Рестораны
+                            <svg x="0" y="0" width="14" height="9" viewBox="0 0 14 9" class="dropdown__icon">
+                                <use xlink:href="/img/sprite.svg#chevron-down"></use>
+                            </svg>
+                        </button>
+
+                        <ul class="dropdown__target" id="restaurants-dropdown" role="listbox">
+                            <li>
+                                <a href="#" class="dropdown__button">Barbaresko</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="dropdown__button">Sans</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="dropdown__button">Lorem</a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="dropdown__button">United rest</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="menu__item">
+                    <a href="#" class="menu__link">События</a>
+                </li>
+
+                <li class="menu__item">
+                    <a href="#" class="menu__link">Контакты</a>
+                </li>
+
+                <li class="menu__item">
+                    <a href="#" class="menu__link">Перезвоните мне</a>
+                </li>
+            </ul>
+        </nav>
+
+        <ul class="menu menu--right">
+            <li class="menu__item-icon">
+                <a href="#" class="menu__link">
+                    <span class="visually-hidden">Поиск</span>
+
+                    <svg x="0" y="0" width="20" height="22" viewBox="0 0 21 22" class="menu__icon">
+                        <use xlink:href="/img/sprite.svg#search"></use>
+                    </svg>
+                </a>
+            </li>
+
+            <li class="menu__item-icon">
+                <a href="#" class="menu__link menu__link--cart" aria-label="1 товар в корзине" data-count="1">
+                    <span class="visually-hidden">Корзина</span>
+
+                    <svg x="0" y="0" width="22" height="22" viewBox="0 0 24 24" class="menu__icon">
+                        <use xlink:href="/img/sprite.svg#cart"></use>
+                    </svg>
+                </a>
+            </li>
+
+            <li class="menu__item-icon">
+                <a href="#" class="menu__link">
+                    <span class="visually-hidden">Профиль</span>
+
+                    <svg x="0" y="0" width="23" height="22" viewBox="0 0 24 22" class="menu__icon">
+                        <use xlink:href="/img/sprite.svg#profile"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<main class="main">
+    <h1 class="visually-hidden">Рестораны</h1>
+
+    <section class="home">
+        <h2 class="visually-hidden">Список ресторанов</h2>
+
+        <div class="container home__container">
+            <ul class="restaurants-list">
+                <li class="restaurant restaurants-list__item">
+                    <h3 class="visually-hidden">Vogue</h3>
+
+                    <img src="/img/logo-vogue.png" class="restaurant__logo restaurant__logo--vogue" alt="Vogue"
+                         width="173" height="118">
+
+                    <div class="restaurant__wrapper">
+                        <div class="restaurant__description-block">
+                            <p class="restaurant__description">Ресторан итальянской кухни</p>
+                            <p class="restaurant__description">Малайская, 16</p>
+                            <p class="restaurant__soon" lang="en">Coming soon</p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="restaurant restaurants-list__item">
+                    <h3 class="visually-hidden">Dyson</h3>
+
+                    <img src="/img/logo-dyson.png" class="restaurant__logo restaurant__logo--dyson" alt="Dyson"
+                         width="202" height="77">
+
+                    <div class="restaurant__wrapper">
+                        <div class="restaurant__description-block">
+                            <p class="restaurant__description">Ресторан южно-африканской кухни</p>
+                            <p class="restaurant__description">Большая конюшенная, 6/17</p>
+                        </div>
+
+                        <div class="restaurant__buttons-block">
+                            <a href="#" class="restaurant__button">
+                                <svg x="0" y="0" width="18" height="18" viewBox="0 0 18 18"
+                                     class="restaurant__button-icon">
+                                    <use xlink:href="/img/sprite.svg#arrow-right"></use>
+                                </svg>
+                                Доставка
+                            </a>
+                            <a href="#" class="restaurant__button">
+                                <svg x="0" y="0" width="18" height="18" viewBox="0 0 18 18"
+                                     class="restaurant__button-icon">
+                                    <use xlink:href="/img/sprite.svg#arrow-right"></use>
+                                </svg>
+                                Забронировать стол
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="restaurant restaurants-list__item">
+                    <h3 class="visually-hidden">Quartz</h3>
+
+                    <img src="/img/logo-quartz.png" class="restaurant__logo restaurant__logo--quartz" alt="Quartz"
+                         width="290" height="46">
+
+                    <div class="restaurant__wrapper">
+                        <div class="restaurant__description-block">
+                            <p class="restaurant__description">Караоке банкет-холл</p>
+                            <p class="restaurant__description">Малая Татищева, 4</p>
+                        </div>
+
+                        <div class="restaurant__buttons-block">
+                            <a href="#" class="restaurant__button">
+                                <svg x="0" y="0" width="18" height="18" viewBox="0 0 18 18"
+                                     class="restaurant__button-icon">
+                                    <use xlink:href="/img/sprite.svg#arrow-right"></use>
+                                </svg>
+                                Доставка
+                            </a>
+                            <a href="#" class="restaurant__button">
+                                <svg x="0" y="0" width="18" height="18" viewBox="0 0 18 18"
+                                     class="restaurant__button-icon">
+                                    <use xlink:href="/img/sprite.svg#arrow-right"></use>
+                                </svg>
+                                Забронировать стол
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="restaurant restaurants-list__item">
+                    <h3 class="visually-hidden">Apple</h3>
+
+                    <img src="/img/logo-apple.png" class="restaurant__logo restaurant__logo--apple" alt="Apple"
+                         width="94" height="115">
+
+                    <div class="restaurant__wrapper">
+                        <div class="restaurant__description-block">
+                            <p class="restaurant__description">Ресторан грузинской кухни</p>
+                            <p class="restaurant__description">М.Ивановский переулок, 7-9 с.1</p>
+                            <p class="restaurant__description">Победа, д. 5, с3</p>
+                            <p class="restaurant__description">Университетская, д. 6, с8</p>
+                        </div>
+
+                        <div class="restaurant__buttons-block">
+                            <a href="#" class="restaurant__button">
+                                <svg x="0" y="0" width="18" height="18" viewBox="0 0 18 18"
+                                     class="restaurant__button-icon">
+                                    <use xlink:href="/img/sprite.svg#arrow-right"></use>
+                                </svg>
+                                Доставка
+                            </a>
+                            <a href="#" class="restaurant__button">
+                                <svg x="0" y="0" width="18" height="18" viewBox="0 0 18 18"
+                                     class="restaurant__button-icon">
+                                    <use xlink:href="/img/sprite.svg#arrow-right"></use>
+                                </svg>
+                                Забронировать стол
+                            </a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="restaurant restaurants-list__item">
+                    <h3 class="visually-hidden">Sony</h3>
+
+                    <img src="/img/logo-sony.png" class="restaurant__logo restaurant__logo--sony" alt="Sony" width="309"
+                         height="56">
+
+                    <div class="restaurant__wrapper">
+                        <div class="restaurant__description-block">
+                            <p class="restaurant__description">Ресторан современной японской кухни</p>
+                            <p class="restaurant__description">Проспект Ленина, 15</p>
+                        </div>
+
+                        <div class="restaurant__buttons-block">
+                            <a href="#" class="restaurant__button">
+                                <svg x="0" y="0" width="18" height="18" viewBox="0 0 18 18"
+                                     class="restaurant__button-icon">
+                                    <use xlink:href="/img/sprite.svg#arrow-right"></use>
+                                </svg>
+                                Доставка
+                            </a>
+                            <a href="#" class="restaurant__button">
+                                <svg x="0" y="0" width="18" height="18" viewBox="0 0 18 18"
+                                     class="restaurant__button-icon">
+                                    <use xlink:href="/img/sprite.svg#arrow-right"></use>
+                                </svg>
+                                Забронировать стол
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="recommended">
+        <div class="container recommended__container">
+            <h2 class="recommended__title">Рекомендуем попробовать</h2>
+
+            <div class="separator recommended__separator">
+                <svg x="0" y="0" width="42" height="48" viewBox="0 0 18 18" class="separator__icon">
+                    <use xlink:href="/img/sprite.svg#profile"></use>
+                </svg>
+
+                <svg x="0" y="0" width="36" height="48" viewBox="0 0 18 18" class="separator__icon">
+                    <use xlink:href="/img/sprite.svg#search"></use>
+                </svg>
+
+                <svg x="0" y="0" width="40" height="48" viewBox="0 0 18 18" class="separator__icon">
+                    <use xlink:href="/img/sprite.svg#cart"></use>
+                </svg>
+
+                <svg x="0" y="0" width="28" height="48" viewBox="0 0 18 18" class="separator__icon">
+                    <use xlink:href="/img/sprite.svg#chevron-down"></use>
+                </svg>
+
+                <svg x="0" y="0" width="48" height="48" viewBox="0 0 18 18" class="separator__icon">
+                    <use xlink:href="/img/sprite.svg#arrow-right"></use>
+                </svg>
+            </div>
+
+            <form class="form">
+                <div class="text-control form__text-control">
+                    <input type="text" id="name" class="text-control__input" name="name" placeholder="Ваше имя"
+                           required>
+                    <label for="name" class="text-control__label">Ваше имя</label>
+                </div>
+
+                <div class="text-control form__text-control">
+                    <input type="tel" id="phone" class="text-control__input" name="phone" placeholder="+7 999 999-99-99"
+                           required>
+                    <label for="phone" class="text-control__label">Номер телефона</label>
+                </div>
+
+                <div class="text-control form__text-control">
+                    <input type="tel" id="comment" class="text-control__input" name="comment" placeholder="Комментарий">
+                    <label for="comment" class="text-control__label">Комментарий</label>
+                </div>
+
+                <button type="submit" class="button">Отправить</button>
+            </form>
+        </div>
+    </section>
+</main>
+
+<script src="/js/bundle.js"></script>
+</body>
+</html>

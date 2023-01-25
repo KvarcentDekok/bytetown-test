@@ -2,6 +2,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const ANIMATION_STEP = 100;
+const TABLET_WIDTH = 960;
 
 const homeSection = document.querySelector('.home');
 
@@ -24,17 +25,6 @@ function createSubstrates() {
 function scrollAnimation() {
     createSubstrates();
 
-    gsap.to(document.body, {
-        scrollTrigger: {
-            trigger: document.body,
-            start: "top top",
-            end: "bottom bottom",
-            scrub: 2
-        },
-        y: -200,
-        ease: "none",
-    });
-
     gsap.to('.recommended, recommended__substrate-block', {
         scrollTrigger: {
             trigger: '.recommended',
@@ -47,7 +37,18 @@ function scrollAnimation() {
         ease: 'none'
     });
 
-    if (window.innerWidth >= 960) {
+    if (window.innerWidth >= TABLET_WIDTH) {
+        gsap.to(document.body, {
+            scrollTrigger: {
+                trigger: document.body,
+                start: "top top",
+                end: "bottom bottom",
+                scrub: 2
+            },
+            y: -200,
+            ease: "none",
+        });
+
         gsap.to('.recommended__substrate:nth-of-type(1)', {
             scrollTrigger: {
                 trigger: '.recommended',

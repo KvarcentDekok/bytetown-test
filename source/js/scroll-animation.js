@@ -3,7 +3,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const ANIMATION_STEP = 100;
 
-const homeSectionHeight = document.querySelector('.home').clientHeight;
+const homeSection = document.querySelector('.home');
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -38,50 +38,52 @@ function scrollAnimation() {
     gsap.to('.recommended, recommended__substrate-block', {
         scrollTrigger: {
             trigger: '.recommended',
-            start: `top ${homeSectionHeight}px`,
+            start: `top ${homeSection.clientHeight}px`,
             end: '+=1600px',
             scrub: true,
             toggleActions: 'restart pause reverse pause'
         },
-        y: -homeSectionHeight,
+        y: -homeSection.clientWidth / 2,
         ease: 'none'
     });
 
-    gsap.to('.recommended__substrate:nth-of-type(1)', {
-        scrollTrigger: {
-            trigger: '.recommended',
-            start: `top ${homeSectionHeight}px`,
-            end: `center ${homeSectionHeight}px`,
-            scrub: 2,
-            toggleActions: 'restart pause reverse pause'
-        },
-        y: -homeSectionHeight,
-        ease: "power1.inOut"
-    });
+    if (window.innerWidth >= 960) {
+        gsap.to('.recommended__substrate:nth-of-type(1)', {
+            scrollTrigger: {
+                trigger: '.recommended',
+                start: `top ${homeSection.clientHeight}px`,
+                end: `center ${homeSection.clientHeight}px`,
+                scrub: 2,
+                toggleActions: 'restart pause reverse pause'
+            },
+            scaleY: 1000,
+            ease: "power1.inOut"
+        });
 
-    gsap.to('.recommended__substrate:nth-of-type(2)', {
-        scrollTrigger: {
-            trigger: '.recommended',
-            start: `top ${homeSectionHeight - ANIMATION_STEP}px`,
-            end: `center ${homeSectionHeight - ANIMATION_STEP}px`,
-            scrub: 2,
-            toggleActions: 'restart pause reverse pause'
-        },
-        y: -homeSectionHeight,
-        ease: "power1.inOut"
-    });
+        gsap.to('.recommended__substrate:nth-of-type(2)', {
+            scrollTrigger: {
+                trigger: '.recommended',
+                start: `top ${homeSection.clientHeight - ANIMATION_STEP}px`,
+                end: `center ${homeSection.clientHeight - ANIMATION_STEP}px`,
+                scrub: 2,
+                toggleActions: 'restart pause reverse pause'
+            },
+            scaleY: 1000,
+            ease: "power1.inOut"
+        });
 
-    gsap.to('.recommended__substrate:nth-of-type(3)', {
-        scrollTrigger: {
-            trigger: '.recommended',
-            start: `top ${homeSectionHeight - ANIMATION_STEP * 2}px`,
-            end: `center ${homeSectionHeight - ANIMATION_STEP * 2}px`,
-            scrub: 2,
-            toggleActions: 'restart pause reverse pause'
-        },
-        y: -homeSectionHeight,
-        ease: "power1.inOut"
-    });
+        gsap.to('.recommended__substrate:nth-of-type(3)', {
+            scrollTrigger: {
+                trigger: '.recommended',
+                start: `top ${homeSection.clientHeight - ANIMATION_STEP * 2}px`,
+                end: `center ${homeSection.clientHeight - ANIMATION_STEP * 2}px`,
+                scrub: 2,
+                toggleActions: 'restart pause reverse pause'
+            },
+            scaleY: 1000,
+            ease: "power1.inOut"
+        });
+    }
 }
 
 export default scrollAnimation;
